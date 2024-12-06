@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversión de Temperaturas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversión de Temperaturas</h1>
+        <p>Convertir temperaturas entre Celsius y Fahrenheit.</p>
+        <button onclick="convertTemperature()">Ejecutar</button>
+    </div>
+    <script>
+        function convertTemperature() {
+            let choice = prompt("Selecciona una opción:\n1. Celsius a Fahrenheit\n2. Fahrenheit a Celsius");
+            if (choice !== "1" && choice !== "2") {
+                alert("Opción no válida.");
+                return;
+            }
+            let temperature = parseFloat(prompt("Introduce la temperatura a convertir:"));
+            if (isNaN(temperature)) {
+                alert("Por favor, introduce un valor numérico válido.");
+                return;
+            }
+            let converted;
+            if (choice === "1") {
+                converted = (temperature * 9/5) + 32;
+                alert(temperature + "°C equivalen a " + converted.toFixed(2) + "°F.");
+            } else {
+                converted = (temperature - 32) * 5/9;
+                alert(temperature + "°F equivalen a " + converted.toFixed(2) + "°C.");
+            }
+        }
+    </script>
+</body>
+</html>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
